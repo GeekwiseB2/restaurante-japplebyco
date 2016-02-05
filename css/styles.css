@@ -162,3 +162,70 @@ div.em {
   font-family: 'Lobster', cursive;
 
 }
+
+div.box {
+  position: relative;
+  z-index: 2;
+  top:100px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  margin-top:10px;
+  margin-bottom:220px;
+  display:block;
+  border-radius:5px;
+  margin-left:250px;
+  margin-right:250px;
+  padding-top:10px;
+  padding-bottom:10px;
+
+}
+
+h2 {
+  position:relative;
+  z-index: 2;
+  font-family: 'Lobster', cursive;
+  color:#dd3500;
+  font-size:4em;
+
+}
+
+#review {
+  background-image:url("../img/food_review.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h3 {
+  position:relative;
+  z-index: 2;
+  margin:0 auto;
+  text-align:center;
+  font-family: 'Lobster', cursive;
+  color:#fff;
+  font-size:4em;
+  padding-top:50px;
+
+}
+
+h4 {
+  text-align:center;
+  font-weight:bold;
+}
+
+
+li {
+  text-align:center;
+  font-weight:bold;
+
+  background-color:#232323;
+}
+
+li.active {
+  background-color:#fff;
+  text-align:center;
+  padding-left:-15px;
+}
+
+a {
+  color:#dd3500;
+}

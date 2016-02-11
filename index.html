@@ -9,45 +9,71 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-default">
+    <div id="navbar" class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="img/name-01.png" alt="name"></a>
+          </div>
+          <div class="nav navbar-nav navbar-right navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a id="home" href="index.html">Home</a></li>
+              <li><a id="story" href="#story1">Our Story</a></li>
+              <li><a id="rev" href="#rev1">Review</a></li>
+                  <li><a id="men" href="#men1">Menu</a></li>
+                  <li><a id="contact" href="#contact1">Contact Us</a></li>
+                </ul>
+          </div>
+				</div>
+				</nav>
+
+	<div id="carousel" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
-	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel" data-slide-to="1"></li>
+	    <li data-target="#carousel" data-slide-to="2"></li>
 	  </ol>
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item active">
-
 	      <img src="img/car1.jpg" alt="car1">
 	      <div class="carousel-caption">
-
 	      </div>
 	    </div>
+
 	    <div class="item">
 	      <img src="img/car2_02.jpg" alt="car2">
 	      <div class="carousel-caption">
 					<a href="//github.com/fat" target="_blank" class="btn btn-primary-outline btn-sm m-b">
-                  <button class="button">Learn More</button>
-                </a>
-
+            <button class="button">Learn More</button>
+          </a>
 	      </div>
 	    </div>
 
 			<div class="item">
-	      <img src="img/car3.jpg" alt="car3">
+	    	<img src="img/car3.jpg" alt="car3">
 	      <div class="carousel-caption">
-
 	      </div>
 	    </div>
 	  </div>
 
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+
 		<div style="margin-top:100px;" class="container">
 			<div class="row">
-				<div class="col-md-5">
+				<div id="story1" class="col-md-5">
 					<h1>Our Story</h1>
 					<h6><b>One Man. One Dream.</b></h6>
 				</div>
@@ -64,77 +90,95 @@
 		<div id="review" class="row">
 
 
-				<div class="box"><h2>Fresno Bee</h2><p style="color:#fff; font-size:1.3em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+				<div id="rev1" class="box"><h2>Fresno Bee</h2><p style="color:#fff; font-size:1.3em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
 
 		</div>
 	</div>
 
-	<div id="menu" class="wrapper">
-		<img style="width:100%; position:absolute; z-index:1;" src="img/black_linen.png" alt="bg">
+	<div id="men1">
 		<h3>Menu</h3>
-<div style="backnd-color:rgba(0,0,0,0.0); position:relative; z-index:2; width:70%; border-radius:5px;"class="container">
-	<ul class="nav nav-tabs" role="tablist">
-    <div class="col-md-3"><li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">APPETIZER</a></li></div>
-    <div style="background-color:#232323;" class="col-md-3"><li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">LUNCH</a></li></div>
-    <div style="background-color:#232323;" class="col-md-3"><li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">DINNER</a></li></div>
-    <div style="background-color:#232323;" class="col-md-3"><li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">DESSERT</a></li></div>
-  </ul>
-<div class="row">
-  <div style="background-color:#fff;" class="col-md-3">
-    <div class="thumbnail">
+		<div class="container">
+			<ul class="nav nav-tabs nav-justified" role="tablist">
+		  	<li role="presentation" class="active col-md-3"><a href="#app" aria-controls="app" role="tab" data-toggle="tab">APPETIZER</a></li>
+		    <li role="presentation" class="col-md-3"><a href="#lunch" aria-controls="lunch" role="tab" data-toggle="tab">LUNCH</a></li>
+		    <li role="presentation" class="col-md-3"><a href="#dinner" aria-controls="dinner" role="tab" data-toggle="tab">DINNER</a></li>
+		    <li role="presentation" class="col-md-3"><a href="#dessert" aria-controls="dessert" role="tab" data-toggle="tab">DESSERT</a></li>
+		  </ul>
+			<div id="content" class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="app">
+					<div class="col-md-3">
+						<img class="thumbnail img-responsive" src="img/dip.jpg" alt="dip">
+						<div class="caption">
+							<h4>Appetizer 1</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<img class="thumbnail img-responsive" src="img/eggplant.jpg" alt="eggplant">
+						<div class="caption">
+							<h4>Appetizer 2</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<img class="thumbnail img-responsive" src="img/meat.jpg" alt="meat">
+						<div class="caption">
+							<h4>Appetizer 3</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<img class="thumbnail img-responsive" src="img/bruschetta.jpg" alt="bruschetta">
+						<div class="caption">
+							<h4>Appetizer 4</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
+						</div>
+					</div>
+		    </div>
 
-      <img src="img/dip.jpg" alt="dip">
-      <div class="caption">
-        <h4>Appetizer 1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
-      </div>
-    </div>
-  </div>
-	<div style="background-color:#fff;" class="col-md-3">
-    <div class="thumbnail">
+		    <div role="tabpanel" class="tab-pane" id="lunch">
 
-      <img src="img/eggplant.jpg" alt="eggplant">
-      <div class="caption">
-        <h4>Appetizer 2</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
-      </div>
-    </div>
-  </div>
-	<div style="background-color:#fff;" class="col-md-3">
-    <div class="thumbnail">
+				</div>
+		    <div role="tabpanel" class="tab-pane" id="dinner">
 
-      <img src="img/meat.jpg" alt="meat">
-      <div class="caption">
-        <h4>Appetizer 3</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
-      </div>
-    </div>
-  </div>
-	<div style="background-color:#fff;" class="col-md-3">
-    <div class="thumbnail">
+				</div>
+		    <div role="tabpanel" class="tab-pane" id="dessert">
 
-      <img src="img/bruschetta.jpg" alt="bruschetta">
-      <div class="caption">
-        <h4>Appetizer 4</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, ad.</p>
-      </div>
-    </div>
-  </div>
+				</div>
+		  </div>
+		</div>
+</div>
+
+</div>
+<div id="cont" class="container-fluid">
+	<div id="contact1" class="row">
+		<div class="col-md-offset-2">
+			<h5><b>Contact Us</b></h5>
+			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis totam odit, blanditiis tempore reprehenderit eos quae error, nostrum vel earum voluptatem accusantium ea, animi molestias minus incidunt. Facere consequatur aliquam eos? Deserunt, adipisci, consectetur inventore amet velit illo quas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cum aspernatur, officia cupiditate ea nostrum temporibus natus deserunt optio reprehenderit.</h6>
+			<!-- Do not change the code! -->
+			<a id="foxyform_embed_link_749193" href="http://www.foxyform.com/">foxyform</a>
+			<script type="text/javascript">
+			(function(d, t){
+			   var g = d.createElement(t),
+			       s = d.getElementsByTagName(t)[0];
+			   g.src = "http://www.foxyform.com/js.php?id=749193&sec_hash=ba97480f02e&width=350px";
+			   s.parentNode.insertBefore(g, s);
+			}(document, "script"));
+			</script>
+			<!-- Do not change the code! -->
+<div style="padding-right:170px; margin-top:-460px; height:400px;" class="col-md-offset-6">
+	<p style="color:#fff;">RESTAURANTE<br>123 Fulton St.<br>Fresno, CA 93728 <br> P:(559) 555-1234 </p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.608962956397!2d-119.78801758550662!3d36.73195157923963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945e26d4340503%3A0xb32dda71cf0730a0!2sBitwise+South+Stadium!5e0!3m2!1sen!2sus!4v1454036718357" width="90%" height="200px" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 </div>
+
+</div>
 </div>
 
 
 
-	  <!-- Controls -->
-	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
+
+
 	</div>
 
 	<!-- javascript	 -->
